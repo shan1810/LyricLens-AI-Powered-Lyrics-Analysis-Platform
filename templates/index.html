@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- =========================
+         BASIC META INFORMATION
+    ========================== -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- =========================
+         WEBSITE TITLE
+    ========================== -->
+    <title>LyricLens | AI Lyrics Analyzer</title>
+
+    <!-- =========================
+         GOOGLE FONTS
+    ========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- =========================
+         CSS FILE
+    ========================== -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR SECTION
+    ========================== -->
+    
+<nav class="navbar">
+
+    <div class="logo">
+        LyricLens
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#features">Features</a>
+        </li>
+
+        <li>
+            <a href="#analyze">Analyze</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>
+                Analyze Song Lyrics with AI
+            </h1>
+
+            <p>
+                Discover emotions, themes, sentiment,
+                rhyme quality, and deep lyrical insights
+                powered by Gemini AI.
+            </p>
+
+
+<a href="#analyze">
+
+    <button class="hero-btn">
+        Try Now
+    </button>
+
+</a>
+
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MAIN ANALYSIS SECTION
+    ========================== -->
+    <section class="analyzer-section" id="analyze">
+
+        <div class="analyzer-container">
+
+            <h2>
+                Paste Your Lyrics
+            </h2>
+
+            <p class="subtitle">
+                Enter song lyrics below and let AI analyze them.
+            </p>
+ 
+<select id="analysis-mode">
+
+    <option value="general">
+        General Analysis
+    </option>
+
+    <option value="mood">
+        Mood Analysis
+    </option>
+
+    <option value="theme">
+        Theme Analysis
+    </option>
+
+    <option value="writing">
+        Writing Feedback
+    </option>
+
+</select>
+
+
+            <!-- =========================
+                 TEXTAREA INPUT
+            ========================== -->
+            <textarea
+                id="lyrics-input"
+                placeholder="Paste your song lyrics here..."
+            ></textarea>
+
+            <!-- =========================
+                 BUTTONS SECTION
+            ========================== -->
+            <div class="button-group">
+
+                <button id="analyze-btn">
+                    Analyze Lyrics
+                </button>
+
+                <button id="clear-btn">
+                    Clear
+                </button>
+
+<button id="copy-btn">
+    Copy Result
+</button>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESULT SECTION
+    ========================== -->
+    <section class="result-section">
+
+        <div class="result-container">
+
+            <h2>
+                AI Analysis Result
+            </h2>
+
+            <!-- =========================
+                 LOADING ANIMATION
+            ========================== -->
+            <div id="loading" class="hidden">
+                Analyzing lyrics...
+            </div>
+
+            <!-- =========================
+                 RESULT BOX
+            ========================== -->
+            <div id="result-box">
+
+                <p class="default-message">
+                    Your AI-generated analysis will appear here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES SECTION
+    ========================== -->
+    <section id="features">
+    <section class="features-section">
+
+        <h2 class="features-heading">
+            Features
+        </h2>
+
+        <div class="features-container">
+
+            <!-- FEATURE 1 -->
+            <div class="feature-card">
+
+                <h3>
+                    Sentiment Analysis
+                </h3>
+
+                <p>
+                    Detect emotional tone and mood of lyrics.
+                </p>
+
+            </div>
+
+            <!-- FEATURE 2 -->
+            <div class="feature-card">
+
+                <h3>
+                    Theme Detection
+                </h3>
+
+                <p>
+                    Identify love, heartbreak, motivation,
+                    storytelling, and more.
+                </p>
+
+            </div>
+
+            <!-- FEATURE 3 -->
+            <div class="feature-card">
+
+                <h3>
+                    AI Feedback
+                </h3>
+
+                <p>
+                    Get detailed songwriting feedback powered by AI.
+                </p>
+
+            </div>
+
+            <!-- FEATURE 4 -->
+            <div class="feature-card">
+
+                <h3>
+                    Smart Insights
+                </h3>
+
+                <p>
+                    Analyze vocabulary richness and lyrical depth.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+</section>
+
+<section id="about">
+
+    <div class="about-container">
+
+        <h2>About LyricLens</h2>
+
+        <p>
+            LyricLens is an AI-powered lyrics analysis platform
+            built using Flask, JavaScript, and Gemini API.
+        </p>
+
+    </div>
+
+</section>
+
+
+    <!-- =========================
+         FOOTER SECTION
+    ========================== -->
+    <footer class="footer">
+
+        <p>
+            © 2026 LyricLens | Built with Flask & Gemini AI
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT FILE
+    ========================== -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
